@@ -1,0 +1,311 @@
+:root {
+  /*   ## Colors
+
+### Primary
+ */
+  --color-Marine-blue: hsl(213, 96%, 18%);
+  --color-Purplish-blue: hsl(243, 100%, 62%);
+  --color-Pastel-blue: hsl(228, 100%, 84%);
+  --color-Light-blue: hsl(206, 94%, 87%);
+  --color-Strawberry-red: hsl(354, 84%, 57%);
+
+  /* ### Neutral */
+
+  --color-Cool-gray: hsl(231, 11%, 63%);
+  --color-Light-gray: hsl(229, 24%, 87%);
+  --color-Magnolia: hsl(217, 100%, 97%);
+  --color-Alabaster: hsl(231, 100%, 99%);
+  --color-White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-Light-blue);
+}
+
+.Form {
+  width: 940px;
+  height: 600px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: var(--color-White);
+}
+
+.FormLeftSide {
+  width: 270px;
+  border-radius: 15px;
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--color-Purplish-blue);
+  background-image: url("/assets/images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.FormStep {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+.FormStepCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-White);
+}
+.FormStep--active .FormStepCircle {
+  background-color: var(--color-Light-blue);
+  color: var(--color-Marine-blue);
+}
+.FormStepNames {
+  display: flex;
+  flex-direction: column;
+}
+.FormStepNamesStep,
+.FormStepNamesName {
+  text-transform: uppercase;
+}
+.FormStepNamesStep {
+  font-size: 15px;
+  color: var(--color-Cool-gray);
+}
+.FormStepNamesName {
+  font-size: 16px;
+  color: var(--color-White);
+}
+.FormRightSide {
+  flex-grow: 1;
+  border-radius: 15px;
+  padding: 35px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.FormContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.FormHeader {
+  font-size: 36px;
+  color: var(--color-Marine-blue);
+}
+.FormDescription {
+  font-size: 18px;
+  color: var(--color-Cool-gray);
+}
+
+.FormPersonalInfoFieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: none;
+}
+.FormTextFieldRoot {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.FormTextFieldInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.FormTextFieldInfoName {
+  color: var(--color-Marine-blue);
+}
+.FormTextFieldInfoError {
+  color: var(--color-Strawberry-red);
+  font-weight: 700;
+}
+.FormTextFieldInput {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--color-Light-gray);
+  font-size: 16px;
+  color: var(--color-Marine-blue);
+}
+.FormTextFieldInput:hover,
+.FormTextFieldInput:focus {
+  border-color: var(--color-Purplish-blue);
+}
+.FormTextFieldRoot-error .FormTextFieldInput {
+  border-color: var(--color-Strawberry-red);
+}
+.FormPlans {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.FormPlan {
+  flex-shrink: 0;
+  width: 135px;
+  padding: 15px;
+  border: 1px solid var(--color-Cool-gray);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.FormPlan:hover {
+  border-color: var(--color-Purplish-blue);
+}
+.FormPlanName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-Marine-blue);
+  margin-top: 40px;
+}
+.FormPlanPrice {
+  color: var(--color-Cool-gray);
+}
+.FormPlanInput {
+  position: absolute;
+  display: none;
+}
+input:checked + .FormPlan {
+  border-color: var(--color-Purplish-blue);
+}
+.Addons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Addon {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid var(--color-Cool-gray);
+  border-radius: 10px;
+}
+.Addon:hover,
+.Addon--active {
+  border-color: var(--color-Purplish-blue);
+}
+.AddonContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-grow: 1;
+}
+.AddonName {
+  font-size: 20px;
+  color: var(--color-Marine-blue);
+}
+.AddonDescription {
+  color: var(--color-Cool-gray);
+}
+.AddonPrice {
+  color: var(--color-Purplish-blue);
+  font-weight: 700;
+}
+
+.Summary {
+  padding: 20px;
+  background-color: var(--color-Light-gray);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.SummaryPlan,
+.SummaryAddon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.SummaryPlan {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-Marine-blue);
+}
+
+.SummaryAddonName {
+  font-size: 16px;
+  color: var(--color-Cool-gray);
+}
+
+.SummaryAddonPrice {
+  font-size: 16px;
+  color: var(--color-Marine-blue);
+}
+
+.Finish {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Finish img {
+  width: 80px;
+  height: 80px;
+}
+
+.FinishHeader {
+  font-size: 36px;
+  color: var(--color-Marine-blue);
+}
+
+.FinishDescription {
+  font-size: 18px;
+  color: var(--color-Light-gray);
+}
+
+.FormActions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.FormButton {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: var(--color-White);
+  color: var(--color-Cool-gray);
+  font-size: 16px;
+  cursor: pointer;
+}
+.FormButton:hover {
+  color: var(--color-Marine-blue);
+}
+
+.FormButtonFilled {
+  background-color: var(--color-Marine-blue);
+  color: var(--color-White);
+}
+.FormButtonFilled:hover {
+  background-color: var(--color-Purplish-blue);
+  color: var(--color-White);
+}

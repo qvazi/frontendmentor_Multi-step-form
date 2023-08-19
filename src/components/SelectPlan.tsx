@@ -41,7 +41,7 @@ const Plan = React.forwardRef<HTMLInputElement, PlanProps>(
         <label className="FormPlan" htmlFor={id}>
           <div className="FormPlanIcon">
             <img
-              src={`/assets/images/icon-${label.toLowerCase()}.svg`}
+              src={`./assets/images/icon-${label.toLowerCase()}.svg`}
               alt=""
             />
           </div>

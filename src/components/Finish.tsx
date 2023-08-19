@@ -6,7 +6,7 @@ export const Finish = () => {
   return (
     <Fragment>
       <div className="Finish">
-        <img src="/assets/images/icon-thank-you.svg" alt="" />
+        <img src="./assets/images/icon-thank-you.svg" alt="" />
         <h2 className="FinishHeader">Thank you!</h2>
 
         <p className="FinishDescription">
